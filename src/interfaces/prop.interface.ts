@@ -1,4 +1,4 @@
-export interface NoteProps {
+export interface DataProps {
   id: number;
   time: string;
   content: string;

@@ -12,7 +12,7 @@ export const NotesTable: FC = () => {
   };
   return (
     <div>
-      <table>
+      <table className="table-container">
         <thead>
           <tr>
             <th>Time of Creation</th>
@@ -38,7 +38,7 @@ export const NotesTable: FC = () => {
           )}
         </tbody>
       </table>
-      <h2>Summary</h2>
+      <h2 className="summary">Summary</h2>
       <table>
         <thead>
           <tr>

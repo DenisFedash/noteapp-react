@@ -1,7 +1,7 @@
 import { FC } from "react";
 import { useDispatch } from "react-redux";
 
-import { NoteProps } from "../interfaces/prop.interface";
+import { DataProps } from "../interfaces/prop.interface";
 import {
   archiveNote,
   deleteNote,
@@ -9,7 +9,7 @@ import {
   unarchiveNote,
 } from "../redux/noteSlice";
 
-export const Note: FC<NoteProps> = ({
+export const Note: FC<DataProps> = ({
   id,
   time,
   content,
@@ -46,12 +46,29 @@ export const Note: FC<NoteProps> = ({
       <td>{datesMentioned.join(", ")}</td>
       <td>
         {archived ? (
-          <button onClick={() => unarchiveNoteHandler(id)}>Unarchive</button>
+          <button
+            className="unarchiveBtn"
+            onClick={() => unarchiveNoteHandler(id)}
+          >
+            Unarchive
+          </button>
         ) : (
           <>
-            <button onClick={() => archiveNoteHandler(id)}>Archive</button>
-            <button onClick={() => editNoteHandler(id, content)}>Edit</button>
-            <button onClick={() => deleteNoteHandler(id)}>Delete</button>
+            <button
+              className="archiveBtn"
+              onClick={() => archiveNoteHandler(id)}
+            >
+              Archive
+            </button>
+            <button
+              className="editBtn"
+              onClick={() => editNoteHandler(id, content)}
+            >
+              Edit
+            </button>
+            <button className="deleteBtn" onClick={() => deleteNoteHandler(id)}>
+              Delete
+            </button>
           </>
         )}
       </td>

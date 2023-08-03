@@ -1,9 +1,11 @@
-import { NoteProps } from "../interfaces/prop.interface";
+import { DataProps } from "../interfaces/prop.interface";
 
-let initialNotes: NoteProps[] = [
+
+
+let initialNotes: DataProps[] = [
   {
     id: 1,
-    time: "2023-07-30T10:00:00",
+    time: '2023-07-30T10:00:00',
     content: "Buy groceries",
     category: "Task",
     datesMentioned: ["2023-07-31"],

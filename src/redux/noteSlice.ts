@@ -1,13 +1,13 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { findDates } from '../utils/findDates';
 import { initialNotes } from '../data/data';
-import { NoteProps } from '../interfaces/prop.interface';
+import { DataProps } from '../interfaces/prop.interface';
 
 const notesSlice = createSlice({
   name: 'notes',
   initialState: initialNotes,
   reducers: {
-    addNote: (state, action: PayloadAction<NoteProps>) => {
+    addNote: (state, action: PayloadAction<DataProps>) => {
       state.push(action.payload);
     },
     editNote: (state, action: PayloadAction<{ id: number; content: string }>) => {
@@ -35,6 +35,8 @@ const notesSlice = createSlice({
     },
   },
 });
+
+
 
 
 
