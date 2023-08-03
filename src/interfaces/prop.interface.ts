@@ -3,6 +3,6 @@ export interface DataProps {
   time: string;
   content: string;
   category: string;
-  datesMentioned: string[];
+  datesMentioned: string;
   archived: boolean;
 }

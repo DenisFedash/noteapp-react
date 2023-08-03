@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { addNote } from "../redux/noteSlice";
-import { findDates } from "../utils/findDates";
 
 export const AddNoteForm: React.FC = () => {
   const dispatch = useDispatch();
@@ -19,7 +18,7 @@ export const AddNoteForm: React.FC = () => {
       time: new Date().toLocaleString(),
       content,
       category,
-      datesMentioned: findDates(content),
+      datesMentioned: new Date().toLocaleDateString(),
       archived: false,
     };
 

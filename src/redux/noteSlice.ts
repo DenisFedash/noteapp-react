@@ -1,5 +1,4 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { findDates } from '../utils/findDates';
 import { initialNotes } from '../data/data';
 import { DataProps } from '../interfaces/prop.interface';
 
@@ -15,7 +14,7 @@ const notesSlice = createSlice({
       const note = state.find((n) => n.id === id);
       if (note) {
         note.content = content;
-        note.datesMentioned = findDates(content);
+        note.datesMentioned = new Date().toLocaleDateString("en-GB");
       }
     },
     archiveNote: (state, action: PayloadAction<number>) => {

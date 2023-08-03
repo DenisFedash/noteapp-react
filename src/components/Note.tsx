@@ -43,7 +43,7 @@ export const Note: FC<DataProps> = ({
       <td>{time}</td>
       <td>{content}</td>
       <td>{category}</td>
-      <td>{datesMentioned.join(", ")}</td>
+      <td>{datesMentioned}</td>
       <td>
         {archived ? (
           <button
